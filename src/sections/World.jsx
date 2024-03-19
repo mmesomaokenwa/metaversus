@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image";
 import styles from "@/styles";
 import { motion } from "framer-motion";
 import { staggerContainer, fadeIn } from "@/utils/motion";
@@ -20,15 +21,15 @@ const World = () => (
         variants={fadeIn("up", "tween", 0.3, 1)}
         className="relative mt-[68px] flex w-full h-[550px]"
       >
-        <img src="/map.png" alt="map" className="w-full h-full object-cover" />
+        <Image src="/map.png" alt="map" layout="fill" className="w-full h-full object-cover" />
         <div className="absolute bottom-20 right-20 w-[70px] h-[70px] p-1 bg-[#5D6680] rounded-full">
-          <img src="people-01.png" alt="people" className="w-full h-full object-cover" />
+          <Image src="/people-01.png" layout="fill" alt="people" className="w-full h-full object-cover" />
         </div>
         <div className="absolute top-10 left-20 w-[70px] h-[70px] p-1 bg-[#5D6680] rounded-full">
-          <img src="people-02.png" alt="people" className="w-full h-full" />
+          <Image src="/people-02.png" layout="fill" alt="people" className="w-full h-full" />
         </div>
         <div className="absolute top-1/2 left-[45%] w-[70px] h-[70px] p-1 bg-[#5D6680] rounded-full">
-          <img src="people-03.png" alt="people" className="w-full h-full" />
+          <Image src="/people-03.png" layout="fill" alt="people" className="w-full h-full" />
         </div>
         <div className="absolute top-1/4 left-[10%] w-[150px] h-[150px] p-1 bg-[#5D6680] rounded-[24px]">
           <GroupCard

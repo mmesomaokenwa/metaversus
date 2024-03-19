@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import styles from '@/styles';
 import { motion } from 'framer-motion';
 import { staggerContainer, slideIn, textVariant } from '@/utils/motion';
@@ -31,11 +32,13 @@ const Hero = () => (
         className="relative w-full md:-mt-[20px] -mt-[12px]"
       >
         <div className="absolute w-full h-[300px] hero-gradient rounded-tl-[140px] z-[0] -top-[30px]" />
-        <img src="/cover.png" className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative" alt="cover" />
+        <Image src="/cover.png" width={950} height={950} className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative" alt="cover" />
         <a href="#explore">
           <div className="w-full flex justify-end sm:-mt-[70px] -mt-[50px] pr-[40px] relative z-10">
-            <img
+            <Image
               src="/stamp.png"
+              width={155}
+              height={155}
               className="sm:w-[155px] w-[100px] sm:h-[155px] h-[100px] object-contain"
               alt="stamp"
             />
